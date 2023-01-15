@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace ProjektBazyDanych
         public DateTime birth_date { get; set; }
         [Required]
         public string passportID { get; set; }
-        public ICollection<Accounts> user_name { get; set; }
+        [ForeignKey("user_name")]
+        public string user_name { get; set; }
     }
 }
