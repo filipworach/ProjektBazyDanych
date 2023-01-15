@@ -22,6 +22,8 @@ namespace ProjektBazyDanych
     {
         public MainWindow()
         {
+            Database database = new Database();
+            var passengers = database.Passengers.ToList();
             InitializeComponent();
         }
     }
