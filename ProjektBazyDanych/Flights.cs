@@ -13,6 +13,7 @@ namespace ProjektBazyDanych
         [Key]
         public int id { get; set; }
 
+
         [ForeignKey ("id")]
         [Required]
         public int first_pilot { get; set; }
@@ -38,7 +39,7 @@ namespace ProjektBazyDanych
 
         [Required]
         public bool canceled { get; set; }
-        
+
 
     }
 }

@@ -18,7 +18,7 @@ namespace ProjektBazyDanych
         public DateTime birth_date { get; set; }
         [Required]
         public string passportID { get; set; }
-        [ForeignKey("user_name")]
+ 
         public string user_name { get; set; }
     }
 }

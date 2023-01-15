@@ -23,7 +23,7 @@ namespace ProjektBazyDanych
         public MainWindow()
         {
             Database database = new Database();
-            var passengers = database.Passengers.ToList();
+            var flights = database.Flights.ToList();
             InitializeComponent();
         }
     }

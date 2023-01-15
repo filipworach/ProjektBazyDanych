@@ -20,5 +20,7 @@ namespace ProjektBazyDanych
 
         [Required]
         public DateTime hire_date { get; set; }
+
+        public List<Flights> Flights;
     }
 }

@@ -16,10 +16,12 @@ namespace ProjektBazyDanych
         [Required]
         public ICollection<Accounts> user_name { get; set; }
         [Required]
-        public ICollection<Flights> fligthID { get; set; }
+        public Flights fligthID { get; set; }
         [Required]
         public DateTime reservation_date { get; set; }
         public bool processed { get; set; }
+
+        public List<Flights> Flights { get; set; }
 
     }
 }

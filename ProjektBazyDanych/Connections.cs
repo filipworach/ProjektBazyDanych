@@ -7,18 +7,17 @@ using System.Threading.Tasks;
 
 namespace ProjektBazyDanych
 {
-    internal class Cities
+    class Connections
     {
         [Key]
         public int id { get; set; }
-
         [Required]
-        public string city { get; set; }
-
+        public int departure_cityID { get; set; }
         [Required]
-        public string country { get; set; }
+        public int arrival_cityID { get; set; }
 
-        public string region { get; set; }
-
+        public Cities departureCity { get; set; }
+        public Cities arrivalCity { get; set; }
+        public List<Flights> Flights { get; set; }
     }
 }
