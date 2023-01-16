@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjektBazyDanych
 {
-    class Connections
+    public class Connections
     {
         [Key]
         public int id { get; set; }
@@ -18,6 +18,6 @@ namespace ProjektBazyDanych
 
         public Cities departureCity { get; set; }
         public Cities arrivalCity { get; set; }
-        public List<Flights> Flights { get; set; }
+        //public List<Flights> Flights { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjektBazyDanych
 {
-    internal class Cities
+    public class Cities
     {
         [Key]
         public int id { get; set; }
@@ -20,5 +20,6 @@ namespace ProjektBazyDanych
 
         public string region { get; set; }
 
+        
     }
 }

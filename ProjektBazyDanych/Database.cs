@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjektBazyDanych
 {
-    class Database : DbContext
+    public class Database : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

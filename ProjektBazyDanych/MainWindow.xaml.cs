@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,21 @@ namespace ProjektBazyDanych
         public MainWindow()
         {
             Database database = new Database();
-            var flights = database.Flights.ToList();
+            /*            List<Flights> flights = database.Flights.Where(r => r.id == 0).ToList();
+            */
+
+            using (var context = new Database())
+            {
+                var reservations = context.Flights.Include(r => r.Reservations).ToList();
+            }
+            
+
+/*            foreach (var f in flights)
+            {
+                f.Reservations.ForEach(Console.WriteLine);
+            }*/
+
+
             InitializeComponent();
         }
     }

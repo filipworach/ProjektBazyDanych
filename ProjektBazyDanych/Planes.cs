@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjektBazyDanych
 {
-    internal class Planes
+    public class Planes
     {
         [Key]
         public int id { get; set; }

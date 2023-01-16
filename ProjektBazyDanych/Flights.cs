@@ -8,22 +8,17 @@ using System.Threading.Tasks;
 
 namespace ProjektBazyDanych
 {
-    internal class Flights
+    public class Flights
     {
         [Key]
         public int id { get; set; }
 
-
-        [ForeignKey ("id")]
         [Required]
         public int first_pilot { get; set; }
 
-
-        [ForeignKey("id")]
         [Required]
         public int second_pilot { get; set; }
 
-        [ForeignKey("id")]
         [Required]
         public int connectionID { get; set; }
 
@@ -33,13 +28,14 @@ namespace ProjektBazyDanych
         [Required]
         public DateTime arrival_date { get; set; }
 
-        [ForeignKey("id")]
         [Required]
         public string plane_id { get; set; }
 
         [Required]
         public bool canceled { get; set; }
 
+        
+        public virtual List<Reservations> Reservations { get; set; }
 
     }
 }

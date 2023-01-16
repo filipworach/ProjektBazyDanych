@@ -7,11 +7,23 @@ using System.Threading.Tasks;
 
 namespace ProjektBazyDanych
 {
-    class Accounts
+    public class Accounts
     {
         [Key]
         public string user_name { get; set; }
         [Required]
-        public string password { get; set; }        
+        public string password { get; set; }
+
+        public List<Reservations> reservations { get; set; }
+
+        public Accounts(string user_name,string password)
+        {
+            this.user_name = user_name;
+            this.password = password;
+        }
+        public Accounts()
+        {
+
+        }
     }
 }

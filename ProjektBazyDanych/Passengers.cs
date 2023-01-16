@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProjektBazyDanych
 {
-    class Passengers
+    public class Passengers
     {
         [Key]
         public int id { get; set; }
