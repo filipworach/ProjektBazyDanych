@@ -16,22 +16,15 @@ namespace ProjektBazyDanych
         [Required]
         public int arrival_cityID { get; set; }
 
-        public Cities departureCity { get; set; }
-        public Cities arrivalCity { get; set; }
-        
 
-        public Connections(int id, int departure_cityID, int arrival_cityID, Cities departureCity, Cities arrivalCity)
+        //public virtual List<Flights> Flights { get; set; }
+
+        public Connections(int id, int departure_cityID, int arrival_cityID)
         {
             this.id = id;
             this.departure_cityID = departure_cityID;
             this.arrival_cityID = arrival_cityID;
-            this.departureCity = departureCity;
-            this.arrivalCity = arrivalCity;
-            
         }
-
-        public Connections()
-        {
-        }
+        public Connections() { }
     }
 }

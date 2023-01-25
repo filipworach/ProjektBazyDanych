@@ -29,18 +29,43 @@ namespace ProjektBazyDanych
 
             using (var context = new Database())
             {
-                //var reservations = context.Reservations.FromSqlRaw("Select * from reservations where flightID = 0").ToList();
-                //var reservations = context.Flights.Include(r => r.flight).Include(r=>r.Passenger).Include(r=>r.accounts).ToList();
+                var flights = context.Flights.Include(r => r.Reservations).ToList();
+                //var reservation = context.Reservations.Include(r => r.Passenger).Include(x => x.Flight).Include(f => f.Account).ToList();
             }
-            
 
-/*            foreach (var f in flights)
-            {
-                f.Reservations.ForEach(Console.WriteLine);
-            }*/
+
+            /*            foreach (var f in flights)
+                        {
+                            f.Reservations.ForEach(Console.WriteLine);
+                        }*/
 
 
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            using (var context = new Database())
+            {
+
+                string login = loginTextBox.Text;
+                var user = context.Accounts.Find(login);
+                string passwordd = password.Password.ToString();
+                if (user != null) { 
+                if (login.Equals(user.user_name) && passwordd.Equals(user.password))
+                {
+                    Window1 window = new Window1();
+                    window.Show(); ;
+                    this.Close();
+                }
+
+            }
+            }
+        }
+
+        private void loginTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -34,16 +34,10 @@ namespace ProjektBazyDanych
         [Required]
         public bool canceled { get; set; }
 
-        
-        public virtual List<Reservations> reservations { get; set; }
-        
-        public virtual List<Passengers> Passengers { get; set; }
+        //public virtual Connections Connections { get; set; }
 
         
-
-        public Flights()
-        {
-        }
+        public virtual List<Reservations> Reservations { get; set; }
 
         public Flights(int id, int first_pilot, int second_pilot, int connectionID, DateTime departure_date, DateTime arrival_date, string plane_id, bool canceled)
         {
@@ -55,7 +49,7 @@ namespace ProjektBazyDanych
             this.arrival_date = arrival_date;
             this.plane_id = plane_id;
             this.canceled = canceled;
-           
         }
+        public Flights() { }
     }
 }

@@ -23,8 +23,6 @@ namespace ProjektBazyDanych
 
         public virtual List<Reservations> Reservations { get; set; }
 
-        public virtual Flights flights { get; set; }
-
         public Passengers(int id, string first_name, DateTime birth_date, string passportID, string user_name)
         {
             this.id = id;
@@ -32,11 +30,7 @@ namespace ProjektBazyDanych
             this.birth_date = birth_date;
             this.passportID = passportID;
             this.user_name = user_name;
-            
         }
-
-        public Passengers()
-        {
-        }
+        public Passengers() { }
     }
 }
