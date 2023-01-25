@@ -29,7 +29,8 @@ namespace ProjektBazyDanych
 
             using (var context = new Database())
             {
-                var reservations = context.Flights.Include(r => r.Reservations).ToList();
+                //var reservations = context.Reservations.FromSqlRaw("Select * from reservations where flightID = 0").ToList();
+                //var reservations = context.Flights.Include(r => r.flight).Include(r=>r.Passenger).Include(r=>r.accounts).ToList();
             }
             
 

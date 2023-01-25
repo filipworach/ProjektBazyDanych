@@ -18,6 +18,20 @@ namespace ProjektBazyDanych
 
         public Cities departureCity { get; set; }
         public Cities arrivalCity { get; set; }
-        //public List<Flights> Flights { get; set; }
+        
+
+        public Connections(int id, int departure_cityID, int arrival_cityID, Cities departureCity, Cities arrivalCity)
+        {
+            this.id = id;
+            this.departure_cityID = departure_cityID;
+            this.arrival_cityID = arrival_cityID;
+            this.departureCity = departureCity;
+            this.arrivalCity = arrivalCity;
+            
+        }
+
+        public Connections()
+        {
+        }
     }
 }

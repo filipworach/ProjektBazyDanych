@@ -25,7 +25,9 @@ namespace ProjektBazyDanych
 
         public virtual Flights flight { get; set; }
 
-        public virtual Accounts account { get; set; }
+        public virtual Accounts accounts { get; set; }
+
+        public virtual Passengers Passenger { get; set; }
 
         public Reservations(int id, int passengerID, string user_name, int flightID, DateTime reservation_date, bool? processed)
         {
@@ -35,7 +37,6 @@ namespace ProjektBazyDanych
             this.flightID = flightID;
             this.reservation_date = reservation_date;
             this.processed = processed;
-        
         }
 
         public Reservations()
