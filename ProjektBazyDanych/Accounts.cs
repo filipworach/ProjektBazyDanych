@@ -14,7 +14,7 @@ namespace ProjektBazyDanych
         [Required]
         public string password { get; set; }
 
-        public List<Reservations> reservations { get; set; }
+        public List<Reservations> Reservations { get; set; }
 
         public Accounts(string user_name,string password)
         {

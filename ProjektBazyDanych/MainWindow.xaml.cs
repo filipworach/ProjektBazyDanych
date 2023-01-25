@@ -29,17 +29,31 @@ namespace ProjektBazyDanych
 
             using (var context = new Database())
             {
-                var reservations = context.Flights.Include(r => r.Reservations).ToList();
+                var flights = context.Flights.Include(r => r.Reservations).ToList();
+                //var reservation = context.Reservations.Include(r => r.Passenger).Include(x => x.Flight).Include(f => f.Account).ToList();
             }
-            
 
-/*            foreach (var f in flights)
-            {
-                f.Reservations.ForEach(Console.WriteLine);
-            }*/
+
+            /*            foreach (var f in flights)
+                        {
+                            f.Reservations.ForEach(Console.WriteLine);
+                        }*/
 
 
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            labelTest.Content = password.Password.ToString();
+            Window1 window = new Window1();
+            window.Show(); ;
+            this.Close();
+        }
+
+        private void loginTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
