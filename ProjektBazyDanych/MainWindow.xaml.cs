@@ -51,25 +51,51 @@ namespace ProjektBazyDanych
         {
             using (var context = new Database())
             {
-
                 string login = loginTextBox.Text;
                 var user = context.Accounts.Find(login);
                 string passwordd = password.Password.ToString();
-                if (user != null) { 
-                if (login.Equals(user.user_name) && passwordd.Equals(user.password))
+                if (user != null)
                 {
-                    Window1 window = new Window1();
-                    window.Show(); ;
-                    this.Close();
+                    if (login.Equals(user.user_name) && passwordd.Equals(user.password))
+                    {
+                        Window1 window = new Window1();
+                        window.Show(); ;
+                        this.Close();
+                    }
+                    else
+                    {
+                        loginLabel.Content = "Podano błędny login lub hasło";
+                    }
                 }
-
-            }
+                else
+                {
+                    loginLabel.Content = "Podano błędny login lub hasło";
+                }
             }
         }
 
         private void loginTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            loginLabel.Content = "";
+        }
 
+        private void registerButton_Click(object sender, RoutedEventArgs e)
+        {
+            string newLogin = loginTextBox.Text;
+            string newPassword = password.Password;
+            using (var context = new Database())
+            {
+                if(context.Accounts.Find(newLogin) != null)
+                {
+                    loginLabel.Content = "Konto już istnieje";
+                } else
+                {
+                    Accounts account = new Accounts(newLogin, newPassword);
+                    context.Accounts.Add(account);
+                    context.SaveChanges();
+                    
+                }
+            }
         }
     }
 }
