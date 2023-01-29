@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,11 +17,13 @@ namespace ProjektBazyDanych
 
         public List<Reservations> Reservations { get; set; }
 
-        public Accounts(string user_name,string password)
+        public Accounts(string user_name, string password)
         {
             this.user_name = user_name;
             this.password = password;
+           
         }
+
         public Accounts()
         {
 

@@ -39,7 +39,6 @@ namespace ProjektBazyDanych
             this.flightID = flightID;
             this.reservation_date = reservation_date;
             this.processed = processed;
-        
         }
 
         public Reservations(int id, int passengerID, string user_name, int flightID, DateTime reservation_date, bool? processed, Flights flight, Accounts account, Passengers passenger) : this(id, passengerID, user_name, flightID, reservation_date, processed)
