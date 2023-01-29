@@ -22,8 +22,12 @@ namespace ProjektBazyDanych
         [Required]
         public int connectionID { get; set; }
 
+        [ForeignKey("id")]
+        public Connections connection { get; set; }
+
         [Required]
         public DateTime departure_date { get; set; }
+
 
         [Required]
         public DateTime arrival_date { get; set; }

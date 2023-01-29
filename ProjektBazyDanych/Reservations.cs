@@ -10,6 +10,13 @@ namespace ProjektBazyDanych
 {
     public class Reservations
     {
+        private int v1;
+        private int v2;
+        private string v3;
+        private int v4;
+        private DateTime maxValue;
+        private int v5;
+
         [Key]
         public int id { get; set; }
         [Required]
@@ -30,6 +37,11 @@ namespace ProjektBazyDanych
         public virtual Accounts Account { get; set; }
 
         public virtual Passengers Passenger { get; set; }
+
+        public override string ToString()
+        {
+            return "Id Rezerwacji: " + id + "  Pasażer: " + Passenger.first_name ;
+        }
 
         public Reservations(int id, int passengerID, string user_name, int flightID, DateTime reservation_date, bool? processed)
         {
@@ -58,7 +70,15 @@ namespace ProjektBazyDanych
         {
 
         }
-      
 
+        public Reservations(int v1, int v2, string v3, int v4, DateTime maxValue, int v5)
+        {
+            this.v1 = v1;
+            this.v2 = v2;
+            this.v3 = v3;
+            this.v4 = v4;
+            this.maxValue = maxValue;
+            this.v5 = v5;
+        }
     }
 }

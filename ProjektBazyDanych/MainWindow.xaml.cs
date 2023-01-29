@@ -26,11 +26,13 @@ namespace ProjektBazyDanych
             Database database = new Database();
             /*            List<Flights> flights = database.Flights.Where(r => r.id == 0).ToList();
             */
-
             using (var context = new Database())
             {
-                var flights = context.Flights.Include(r => r.Reservations).ToList();
+                var flightss = context.Reservations.Include(r => r.Passenger).ToList();
+
                 //var reservation = context.Reservations.Include(r => r.Passenger).Include(x => x.Flight).Include(f => f.Account).ToList();
+                ReservationList window = new ReservationList(flightss);
+                window.Show();
             }
 
 
@@ -41,6 +43,8 @@ namespace ProjektBazyDanych
 
 
             InitializeComponent();
+            
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
