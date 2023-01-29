@@ -10,24 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ProjektBazyDanych
 {
     /// <summary>
-    /// Logika interakcji dla klasy Window1.xaml
+    /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Page1 : Page
     {
-        public Window1()
+        public Page1()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            FlightWindow flightWindow = new FlightWindow();
-            flightWindow.Show();
         }
     }
 }

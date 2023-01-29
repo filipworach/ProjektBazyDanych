@@ -36,7 +36,9 @@ namespace ProjektBazyDanych
 
         //public virtual Connections Connections { get; set; }
 
-        
+        public override string ToString() {
+            return "Data odlotu: " + departure_date.ToString() + "      Data przylotu: " + arrival_date.ToString();
+                }
         public virtual List<Reservations> Reservations { get; set; }
 
         public Flights(int id, int first_pilot, int second_pilot, int connectionID, DateTime departure_date, DateTime arrival_date, string plane_id, bool canceled)

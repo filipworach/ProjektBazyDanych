@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        <Label Content="Okno 1" HorizontalAlignment="Left" Margin="373,147,0,0" VerticalAlignment="Top"/>
-
+        <Button Content="Wyszukaj lot" HorizontalAlignment="Left" Margin="330,123,0,0" VerticalAlignment="Top" Width="165" Height="55" Click="Button_Click"/>
+        <Button Content="Przeglądaj swoje rezerwacje" HorizontalAlignment="Left" Margin="330,209,0,0" VerticalAlignment="Top" Width="165" Height="58"/>
     </Grid>
 </Window>
