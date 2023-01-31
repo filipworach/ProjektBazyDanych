@@ -21,7 +21,7 @@ namespace ProjektBazyDanych
     {
         Accounts account;
         public Window1(Accounts account)
-        {   
+        {
             this.account = account;
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace ProjektBazyDanych
         private void Button_Click(object sender, RoutedEventArgs e)
         {//loty
             using (var context = new Database())
-            { 
+            {
                 FlightWindow flightWindow = new FlightWindow();
                 flightWindow.Show();
             }
@@ -40,5 +40,6 @@ namespace ProjektBazyDanych
             using (var context = new Database())
             {
             }
+        }
     }
 }
