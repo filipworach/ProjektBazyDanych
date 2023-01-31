@@ -31,8 +31,7 @@ namespace ProjektBazyDanych
                 var flightss = context.Reservations.Include(r => r.Passenger).ToList();
 
                 //var reservation = context.Reservations.Include(r => r.Passenger).Include(x => x.Flight).Include(f => f.Account).ToList();
-                ReservationList window = new ReservationList(flightss);
-                window.Show();
+         
             }
 
 
@@ -52,7 +51,8 @@ namespace ProjektBazyDanych
             using (var context = new Database())
             {
                 string login = loginTextBox.Text;
-                var user = context.Accounts.Find(login);
+                //var user = context.Accounts.Find(login);
+                var user = context.Accounts.Include(r => r.Reservations).ThenInclude(y=>y.Passenger).FirstOrDefault(x => x.user_name == login);
                 string passwordd = password.Password.ToString();
                 if (user != null)
                 {

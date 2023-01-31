@@ -38,7 +38,10 @@ namespace ProjektBazyDanych
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {//rezerwacje
             using (var context = new Database())
-            {
+            {   
+
+                ReservationList window = new ReservationList(account.Reservations);
+                window.Show();
             }
         }
     }
