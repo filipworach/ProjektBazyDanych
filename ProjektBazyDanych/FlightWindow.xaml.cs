@@ -20,6 +20,7 @@ namespace ProjektBazyDanych
     /// </summary>
     public partial class FlightWindow : Window
     {
+        private List<Flights> flightsList;
         public FlightWindow()
         {
             InitializeComponent();
@@ -48,7 +49,6 @@ namespace ProjektBazyDanych
             {
                 string param1 = departureList.SelectedItem.ToString().Substring(37);
                 string param2 = arrivalList.SelectedItem.ToString().Substring(37);
-                /*                var listOfFlights = context.Cities.FromSqlRaw("Select id from [cities] WHERE city = 'Wroclaw'").ToList();*/
                 var departureID = context.Cities.Where(c => c.city == param1).Select(c => c.id).FirstOrDefault();
                 var arrivalID = context.Cities.Where(c => c.city == param2).Select(c => c.id).FirstOrDefault();
 
@@ -61,6 +61,10 @@ namespace ProjektBazyDanych
             }
         }
 
-        
+        private void reservationButton_Click(object sender, RoutedEventArgs e)
+        {
+            var id = listOfAvailableFligths.SelectedIndex;
+            Flights flight = flightsList[id];
+        }
     }
 }
