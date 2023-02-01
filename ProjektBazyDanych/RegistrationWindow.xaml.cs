@@ -57,6 +57,7 @@ namespace ProjektBazyDanych
                     
                     context.Passengers.Add(passengers);
                     context.SaveChanges();
+                    registrationLabel.Content = "Pomyślnie utworzono konto";
 
                 }
             }
