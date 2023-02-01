@@ -52,7 +52,7 @@ namespace ProjektBazyDanych
                 {
                     if (login.Equals(user.user_name) && passwordd.Equals(user.password))
                     {
-                        Window1 window = new Window1(user);
+                        Window1 window = new Window1(login);
                         window.Show(); ;
                         this.Close();
                     }
