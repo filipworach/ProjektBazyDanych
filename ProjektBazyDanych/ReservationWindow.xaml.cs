@@ -91,7 +91,7 @@ namespace ProjektBazyDanych
 
 
                     }
-
+                    infoLabel.Content = "Pomyślnie dokonano rezerwacji";
                     context.SaveChanges();
                 }
             }

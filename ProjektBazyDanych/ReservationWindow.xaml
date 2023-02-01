@@ -30,6 +30,7 @@
         <Label Content="Data urodzenia" HorizontalAlignment="Left" Margin="336,232,0,0" VerticalAlignment="Top"/>
         <Label Content="Numer dowodu" HorizontalAlignment="Left" Margin="455,232,0,0" VerticalAlignment="Top"/>
         <Button x:Name="reservationButton" Content="Rezerwuj" HorizontalAlignment="Left" Margin="500,317,0,0" VerticalAlignment="Top" Width="75" Click="reservationButton_Click"/>
+        <Label x:Name="infoLabel" Content="" HorizontalAlignment="Left" Margin="61,311,0,0" VerticalAlignment="Top" Width="410"/>
 
     </Grid>
 </Window>
