@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:ProjektBazyDanych"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="reservationButton">
         <Button Content="Wyszukaj lot" HorizontalAlignment="Left" Margin="330,123,0,0" VerticalAlignment="Top" Width="165" Height="55" Click="Button_Click"/>
-        <Button Content="Przeglądaj swoje rezerwacje" HorizontalAlignment="Left" Margin="330,209,0,0" VerticalAlignment="Top" Width="165" Height="58"/>
+        <Button Content="Przeglądaj swoje rezerwacje" HorizontalAlignment="Left" Margin="330,209,0,0" VerticalAlignment="Top" Width="165" Height="58" Click="Button_Click_1"/>
     </Grid>
 </Window>

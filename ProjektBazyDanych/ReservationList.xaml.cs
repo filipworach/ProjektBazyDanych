@@ -23,18 +23,14 @@ namespace ProjektBazyDanych
     public partial class ReservationList : Window
     {
         private List<Reservations> reservations = new List<Reservations>();
-        public static List<Reservations> rezerwacje = new List<Reservations>() {
-        new Reservations(1, 1, "Kulej", 1, DateTime.MaxValue, 0),
-        new Reservations(2, 3, "Filip", 1, DateTime.MaxValue, 0),
-        };
 
         public ReservationList(List<Reservations> reservations)
         {
             this.reservations = reservations;
             
             InitializeComponent();
-
-            foreach(Reservations reservation in reservations)
+            listBox.Items.Clear();
+            foreach (Reservations reservation in reservations)
             {
                 listBox.Items.Add(reservation.ToString());
             }
@@ -43,12 +39,14 @@ namespace ProjektBazyDanych
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            int index = listBox.SelectedIndex;
+            string messageBoxText = "CZy na pewno chcesz anulować rezerawcje ";
         }
 
         private void deleteReservation_Click(object sender, RoutedEventArgs e)
         {
-            if (listBox.SelectedIndex > 0) 
+            int selectedIndex = listBox.SelectedIndex;
+            if (selectedIndex > -1) 
             {
                 string messageBoxText = "CZy na pewno chcesz anulować rezerawcje ";
                 string caption = "Potwierdzenie";
@@ -60,7 +58,18 @@ namespace ProjektBazyDanych
 
                 if (result == MessageBoxResult.Yes) {
                     //TODO USUWANIE REZERAWCJI
-                    
+                    Reservations reservationToDelete = reservations[selectedIndex];
+                    using (var context = new Database()) 
+                    {
+                        context.Reservations.Attach(reservationToDelete);
+                        context.Reservations.Remove(reservationToDelete);
+                        context.SaveChanges();
+                        reservations.Remove(reservationToDelete);
+                        listBox.Items.RemoveAt(selectedIndex);
+
+                    }
+
+
                 }
             }
         }

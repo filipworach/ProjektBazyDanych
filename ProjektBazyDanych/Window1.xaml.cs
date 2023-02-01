@@ -19,17 +19,30 @@ namespace ProjektBazyDanych
     /// </summary>
     public partial class Window1 : Window
     {
-        private string login;
-        public Window1(string login)
+        Accounts account;
+        public Window1(Accounts account)
         {
-            this.login = login;
+            this.account = account;
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            FlightWindow flightWindow = new FlightWindow(login);
-            flightWindow.Show();
+        {//loty
+            using (var context = new Database())
+            {
+                FlightWindow flightWindow = new FlightWindow();
+                flightWindow.Show();
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {//rezerwacje
+            using (var context = new Database())
+            {   
+
+                ReservationList window = new ReservationList(account.Reservations);
+                window.Show();
+            }
         }
     }
 }
