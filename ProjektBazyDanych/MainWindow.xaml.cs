@@ -36,6 +36,8 @@ namespace ProjektBazyDanych
 
 
             InitializeComponent();
+            adminWindow adminWindow = new adminWindow();
+            adminWindow.Show();
             
             
         }
