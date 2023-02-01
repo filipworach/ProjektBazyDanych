@@ -173,6 +173,9 @@
     <Compile Include="adminWindows\addCityWindow.xaml.cs">
       <DependentUpon>addCityWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="adminWindows\AddConnectionWindow.xaml.cs">
+      <DependentUpon>AddConnectionWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Connections.cs" />
     <Compile Include="RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
@@ -198,6 +201,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="adminWindows\addCityWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminWindows\AddConnectionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

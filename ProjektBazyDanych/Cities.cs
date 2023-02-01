@@ -20,6 +20,11 @@ namespace ProjektBazyDanych
 
         public string region { get; set; }
 
-        
+        public override string ToString()
+        {
+            return city;
+        }
+
+
     }
 }

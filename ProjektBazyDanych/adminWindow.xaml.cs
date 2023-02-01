@@ -30,5 +30,12 @@ namespace ProjektBazyDanych
             addCityWindow window = new addCityWindow();
             window.Show();
         }
+
+        private void addConnectionWindow_Click(object sender, RoutedEventArgs e)
+        {
+            AddConnectionWindow window = new AddConnectionWindow();
+            window.Show();
+
+        }
     }
 }
