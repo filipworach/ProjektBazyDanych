@@ -21,11 +21,11 @@ namespace ProjektBazyDanych
     public partial class FlightWindow : Window
     {
         private List<Flights> flightsList;
-        private string login;
+        private Accounts account;
       
-        public FlightWindow(string login)
+        public FlightWindow(Accounts account)
         {
-            this.login = login;
+            this.account = account;
             InitializeComponent();
         }
 
@@ -68,7 +68,7 @@ namespace ProjektBazyDanych
         {
             var id = listOfAvailableFligths.SelectedIndex;
             Flights flight = flightsList[id];
-            ReservationWindow reservationWindow = new ReservationWindow(login, flight, dateOfFlight.SelectedDate);
+            ReservationWindow reservationWindow = new ReservationWindow(account.user_name, flight, dateOfFlight.SelectedDate);
             reservationWindow.Show();
         }
     }
