@@ -28,7 +28,7 @@
             <ListBoxItem Content="Warszawa"/>
         </ListBox>
         <Label Content="Kiedy:" HorizontalAlignment="Left" Margin="525,42,0,0" VerticalAlignment="Top"/>
-        <DatePicker x:Name="dateOfFlight" HorizontalAlignment="Left" Margin="576,44,0,0" VerticalAlignment="Top" SelectedDateFormat="Short"/>
+        <DatePicker x:Name="dateOfFlight" HorizontalAlignment="Left" Margin="576,44,0,0" VerticalAlignment="Top" SelectedDateFormat="Short" AutomationProperties.IsRequiredForForm="True"/>
         <ListBox x:Name="numberOfPassengers" HorizontalAlignment="Left" Height="24" Margin="576,86,0,0" VerticalAlignment="Top" Width="100" SelectedIndex="0">
             <ListBoxItem Content="0" IsSelected="True"/>
             <ListBoxItem Content="1" Height="24" IsSelected="True"/>

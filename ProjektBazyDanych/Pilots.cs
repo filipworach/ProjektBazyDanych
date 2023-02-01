@@ -10,7 +10,7 @@ namespace ProjektBazyDanych
     public class Pilots
     {
         [Key]
-        public int id { get; set; }
+        public int ID { get; set; }
 
         [Required]
         public string first_name { get; set; }

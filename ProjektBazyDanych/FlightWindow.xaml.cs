@@ -21,8 +21,11 @@ namespace ProjektBazyDanych
     public partial class FlightWindow : Window
     {
         private List<Flights> flightsList;
-        public FlightWindow()
+        private string login;
+      
+        public FlightWindow(string login)
         {
+            this.login = login;
             InitializeComponent();
         }
 
@@ -49,13 +52,13 @@ namespace ProjektBazyDanych
             {
                 string param1 = departureList.SelectedItem.ToString().Substring(37);
                 string param2 = arrivalList.SelectedItem.ToString().Substring(37);
-                var departureID = context.Cities.Where(c => c.city == param1).Select(c => c.id).FirstOrDefault();
-                var arrivalID = context.Cities.Where(c => c.city == param2).Select(c => c.id).FirstOrDefault();
+                var departureID = context.Cities.Where(c => c.city == param1).Select(c => c.ID).FirstOrDefault();
+                var arrivalID = context.Cities.Where(c => c.city == param2).Select(c => c.ID).FirstOrDefault();
 
-                var connectionID = context.Connections.Where(c => c.arrival_cityID == arrivalID && c.departure_cityID == departureID).Select(c => c.id).FirstOrDefault();
+                var connectionID = context.Connections.Where(c => c.arrival_cityID == arrivalID && c.departure_cityID == departureID).Select(c => c.ID).FirstOrDefault();
                 var date = dateOfFlight.SelectedDate.Value;
                 
-                var flightsList = context.Flights.Where(f => f.connectionID == connectionID && f.departure_date > date).ToList();
+                flightsList = context.Flights.Where(f => f.connectionID == connectionID && f.departure_date > date).ToList();
                 foreach (var flight in flightsList)
                     listOfAvailableFligths.Items.Add(flight.ToString());
             }
@@ -65,6 +68,8 @@ namespace ProjektBazyDanych
         {
             var id = listOfAvailableFligths.SelectedIndex;
             Flights flight = flightsList[id];
+            ReservationWindow reservationWindow = new ReservationWindow(login, flight, dateOfFlight.SelectedDate);
+            reservationWindow.Show();
         }
     }
 }

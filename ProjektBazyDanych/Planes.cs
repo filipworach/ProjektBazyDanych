@@ -10,7 +10,7 @@ namespace ProjektBazyDanych
     public class Planes
     {
         [Key]
-        public int id { get; set; }
+        public int ID { get; set; }
 
         [Required]
         public string producer { get; set; }

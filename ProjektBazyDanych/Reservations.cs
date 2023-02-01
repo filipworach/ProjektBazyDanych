@@ -18,7 +18,7 @@ namespace ProjektBazyDanych
         private int v5;
 
         [Key]
-        public int id { get; set; }
+        public int ID { get; set; }
         [Required]
         public int passengerID { get; set; }
         
@@ -28,7 +28,7 @@ namespace ProjektBazyDanych
         [Required]
         public int flightID { get; set; }
         [Required]
-        public DateTime reservation_date { get; set; }
+        public DateTime? reservation_date { get; set; }
         public bool? processed { get; set; }
 
         public virtual Flights Flight { get; set; }
@@ -40,12 +40,12 @@ namespace ProjektBazyDanych
 
         public override string ToString()
         {
-            return "Id Rezerwacji: " + id + "  Pasażer: " + Passenger.first_name ;
+            return "Id Rezerwacji: " + ID + "  Pasażer: " + Passenger.first_name ;
         }
 
-        public Reservations(int id, int passengerID, string user_name, int flightID, DateTime reservation_date, bool? processed)
+        public Reservations(int id, int passengerID, string user_name, int flightID, DateTime? reservation_date, bool? processed)
         {
-            this.id = id;
+            this.ID = id;
             this.passengerID = passengerID;
             this.user_name = user_name;
             this.flightID = flightID;
@@ -55,7 +55,7 @@ namespace ProjektBazyDanych
 
         public Reservations(int id, int passengerID, string user_name, int flightID, DateTime reservation_date, bool? processed, Flights flight, Accounts account, Passengers passenger) : this(id, passengerID, user_name, flightID, reservation_date, processed)
         {
-            this.id = id;
+            this.ID = id;
             this.passengerID = passengerID;
             this.user_name = user_name;
             this.flightID = flightID;

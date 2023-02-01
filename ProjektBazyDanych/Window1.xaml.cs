@@ -19,14 +19,16 @@ namespace ProjektBazyDanych
     /// </summary>
     public partial class Window1 : Window
     {
-        public Window1()
+        private string login;
+        public Window1(string login)
         {
+            this.login = login;
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            FlightWindow flightWindow = new FlightWindow();
+            FlightWindow flightWindow = new FlightWindow(login);
             flightWindow.Show();
         }
     }

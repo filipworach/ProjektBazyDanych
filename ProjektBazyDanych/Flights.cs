@@ -11,7 +11,7 @@ namespace ProjektBazyDanych
     public class Flights
     {
         [Key]
-        public int id { get; set; }
+        public int ID { get; set; }
 
         [Required]
         public int first_pilot { get; set; }
@@ -47,7 +47,7 @@ namespace ProjektBazyDanych
 
         public Flights(int id, int first_pilot, int second_pilot, int connectionID, DateTime departure_date, DateTime arrival_date, string plane_id, bool canceled)
         {
-            this.id = id;
+            this.ID = id;
             this.first_pilot = first_pilot;
             this.second_pilot = second_pilot;
             this.connectionID = connectionID;

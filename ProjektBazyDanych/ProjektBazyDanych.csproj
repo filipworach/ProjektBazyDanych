@@ -168,6 +168,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Connections.cs" />
+    <Compile Include="RegistrationWindow.xaml.cs">
+      <DependentUpon>RegistrationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ReservationList.xaml.cs">
       <DependentUpon>ReservationList.xaml</DependentUpon>
     </Compile>
@@ -204,6 +207,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RegistrationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ReservationList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

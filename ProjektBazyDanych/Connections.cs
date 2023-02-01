@@ -10,7 +10,7 @@ namespace ProjektBazyDanych
     public class Connections
     {
         [Key]
-        public int id { get; set; }
+        public int ID { get; set; }
         [Required]
         public int departure_cityID { get; set; }
         [Required]
@@ -21,7 +21,7 @@ namespace ProjektBazyDanych
 
         public Connections(int id, int departure_cityID, int arrival_cityID)
         {
-            this.id = id;
+            this.ID = id;
             this.departure_cityID = departure_cityID;
             this.arrival_cityID = arrival_cityID;
         }
