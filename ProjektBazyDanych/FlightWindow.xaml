@@ -30,7 +30,7 @@
         <Label Content="Kiedy:" HorizontalAlignment="Left" Margin="525,42,0,0" VerticalAlignment="Top"/>
         <DatePicker x:Name="dateOfFlight" HorizontalAlignment="Left" Margin="576,44,0,0" VerticalAlignment="Top" SelectedDateFormat="Short" AutomationProperties.IsRequiredForForm="True"/>
         <Button x:Name="searchButton" Content="Wyszukaj lot" HorizontalAlignment="Left" Margin="576,86,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click"/>
-        <ListBox x:Name="listOfAvailableFligths" HorizontalAlignment="Left" Height="100" Margin="128,210,0,0" VerticalAlignment="Top" Width="548"/>
+        <ListBox x:Name="listOfAvailableFligths" HorizontalAlignment="Left" Height="100" Margin="128,210,0,0" VerticalAlignment="Top" Width="548" SelectedIndex="0"/>
         <Button x:Name="reservationButton" Content="Zarezerwuj lot" HorizontalAlignment="Left" Margin="576,330,0,0" VerticalAlignment="Top" Width="100" Click="reservationButton_Click"/>
     </Grid>
 </Window>

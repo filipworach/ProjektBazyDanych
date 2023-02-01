@@ -68,9 +68,12 @@ namespace ProjektBazyDanych
             var id = listOfAvailableFligths.SelectedIndex;
             if (flightsList != null)
             {
-                Flights flight = flightsList[id];
-                ReservationWindow reservationWindow = new ReservationWindow(account.user_name, flight, dateOfFlight.SelectedDate);
-                reservationWindow.Show();
+                if (id < flightsList.Count())
+                {
+                    Flights flight = flightsList[id];
+                    ReservationWindow reservationWindow = new ReservationWindow(account.user_name, flight, dateOfFlight.SelectedDate);
+                    reservationWindow.Show();
+                }
             }
         }
     }
