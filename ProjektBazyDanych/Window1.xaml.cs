@@ -30,7 +30,7 @@ namespace ProjektBazyDanych
         {//loty
             using (var context = new Database())
             {
-                FlightWindow flightWindow = new FlightWindow();
+                FlightWindow flightWindow = new FlightWindow(account);
                 flightWindow.Show();
             }
         }

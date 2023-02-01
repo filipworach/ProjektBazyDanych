@@ -23,9 +23,9 @@ namespace ProjektBazyDanych
         private List<Flights> flightsList;
         private string login;
       
-        public FlightWindow(string login)
+        public FlightWindow(Accounts accounts)
         {
-            this.login = login;
+            this.login = accounts.user_name;
             InitializeComponent();
         }
 

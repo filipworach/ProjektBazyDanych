@@ -29,15 +29,7 @@
         </ListBox>
         <Label Content="Kiedy:" HorizontalAlignment="Left" Margin="525,42,0,0" VerticalAlignment="Top"/>
         <DatePicker x:Name="dateOfFlight" HorizontalAlignment="Left" Margin="576,44,0,0" VerticalAlignment="Top" SelectedDateFormat="Short" AutomationProperties.IsRequiredForForm="True"/>
-        <ListBox x:Name="numberOfPassengers" HorizontalAlignment="Left" Height="24" Margin="576,86,0,0" VerticalAlignment="Top" Width="100" SelectedIndex="0">
-            <ListBoxItem Content="0" IsSelected="True"/>
-            <ListBoxItem Content="1" Height="24" IsSelected="True"/>
-            <ListBoxItem Content="2"/>
-            <ListBoxItem Content="3"/>
-            <ListBoxItem Content="4"/>
-        </ListBox>
-        <Label Content="Liczba współpasażerów:" HorizontalAlignment="Left" Margin="434,84,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="searchButton" Content="Wyszukaj lot" HorizontalAlignment="Left" Margin="576,123,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click"/>
+        <Button x:Name="searchButton" Content="Wyszukaj lot" HorizontalAlignment="Left" Margin="576,86,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click"/>
         <ListBox x:Name="listOfAvailableFligths" HorizontalAlignment="Left" Height="100" Margin="128,210,0,0" VerticalAlignment="Top" Width="548"/>
         <Button x:Name="reservationButton" Content="Zarezerwuj lot" HorizontalAlignment="Left" Margin="576,330,0,0" VerticalAlignment="Top" Width="100" Click="reservationButton_Click"/>
     </Grid>

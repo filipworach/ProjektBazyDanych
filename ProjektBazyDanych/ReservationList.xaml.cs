@@ -40,7 +40,7 @@ namespace ProjektBazyDanych
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int index = listBox.SelectedIndex;
-            string messageBoxText = "CZy na pewno chcesz anulować rezerawcje ";
+           
         }
 
         private void deleteReservation_Click(object sender, RoutedEventArgs e)
@@ -48,7 +48,7 @@ namespace ProjektBazyDanych
             int selectedIndex = listBox.SelectedIndex;
             if (selectedIndex > -1) 
             {
-                string messageBoxText = "CZy na pewno chcesz anulować rezerawcje ";
+                string messageBoxText = "Czy na pewno chcesz anulować rezerawcję?";
                 string caption = "Potwierdzenie";
                 MessageBoxButton button = MessageBoxButton.YesNo;
                 MessageBoxImage icon = MessageBoxImage.Warning;
