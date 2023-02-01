@@ -53,7 +53,14 @@ namespace ProjektBazyDanych
                 {
                     connectionID = -1;
                 }
-                var date = dateOfFlight.SelectedDate.Value;
+                System.DateTime date;
+                try
+                {
+                    date = dateOfFlight.SelectedDate.Value;
+                } catch(System.InvalidOperationException)
+                {
+                    date = System.DateTime.Now;
+                }
                 if (connectionID != -1)
                 {
                     flightsList = context.Flights.Where(f => f.connectionID == connectionID && f.departure_date > date).ToList();
