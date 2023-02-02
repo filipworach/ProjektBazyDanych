@@ -20,6 +20,7 @@
         <Label Content="Data Odlotu" HorizontalAlignment="Left" Margin="96,0,0,0" VerticalAlignment="Center"/>
         <Label Content="Data przylotu" HorizontalAlignment="Left" Margin="255,0,0,0" VerticalAlignment="Center"/>
         <Button x:Name="addFlightButton" Content="Dodaj Lot" HorizontalAlignment="Left" Margin="344,329,0,0" VerticalAlignment="Top" Click="addFlightButton_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="0" Margin="10,294,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="112"/>
 
     </Grid>
 </Window>

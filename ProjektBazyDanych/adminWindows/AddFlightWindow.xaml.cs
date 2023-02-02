@@ -76,10 +76,20 @@ namespace ProjektBazyDanych.adminWindows
 
         private void addFlightButton_Click(object sender, RoutedEventArgs e)
         {
+            if(arrivalDate.SelectedDate!=null && departureDate.SelectedDate != null)
             using (var context = new Database())
             {
-
-            }
+                    Flights flightToAdd = new Flights();
+                    flightToAdd.first_pilot = pilots[firstPilotCB.SelectedIndex].ID;
+                    flightToAdd.second_pilot = pilots[secondPilotCB.SelectedIndex].ID;
+                    flightToAdd.connectionID = connections[connectionCB.SelectedIndex].ID;
+                    flightToAdd.plane_id = planes[planeCB.SelectedIndex].ID;
+                    flightToAdd.arrival_date = (DateTime)arrivalDate.SelectedDate;
+                    flightToAdd.departure_date = (DateTime)departureDate.SelectedDate;
+                    context.Flights.Add(flightToAdd);
+                    context.SaveChanges();
+                }
         }
+
     }
 }
