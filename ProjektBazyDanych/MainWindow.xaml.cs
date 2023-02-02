@@ -36,10 +36,8 @@ namespace ProjektBazyDanych
 
 
             InitializeComponent();
-            adminWindow adminWindow = new adminWindow();
-            adminWindow.Show();
-            
-            
+
+                  
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -52,10 +50,16 @@ namespace ProjektBazyDanych
                 string passwordd = password.Password.ToString();
                 if (user != null)
                 {
-                    if (login.Equals(user.user_name) && passwordd.Equals(user.password))
+
+                    if (login.Equals("admin") && passwordd.Equals("root")) {
+                        adminWindow window = new adminWindow();
+                        window.Show();
+                        this.Close();
+                    }
+                    else if (login.Equals(user.user_name) && passwordd.Equals(user.password))
                     {
                         Window1 window = new Window1(user);
-                        window.Show(); ;
+                        window.Show(); 
                         this.Close();
                     }
                     else
