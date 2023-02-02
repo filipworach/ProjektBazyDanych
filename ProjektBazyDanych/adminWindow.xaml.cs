@@ -37,5 +37,23 @@ namespace ProjektBazyDanych
             window.Show();
 
         }
+
+        private void addPilotWindow_Click(object sender, RoutedEventArgs e)
+        {
+            AddPilotWindow window = new AddPilotWindow();
+            window.Show();
+        }
+
+        private void addPlaneWindow_Click(object sender, RoutedEventArgs e)
+        {
+            AddPlaneWindow window = new AddPlaneWindow();
+            window.Show();
+        }
+
+        private void addFlightButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddFlightWindow window = new AddFlightWindow();
+            window.Show();
+        }
     }
 }

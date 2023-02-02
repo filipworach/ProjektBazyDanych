@@ -22,5 +22,10 @@ namespace ProjektBazyDanych
         public DateTime hire_date { get; set; }
 
         public List<Flights> Flights;
+
+        public override string ToString()
+        {
+            return first_name + " " + last_name;
+        }
     }
 }

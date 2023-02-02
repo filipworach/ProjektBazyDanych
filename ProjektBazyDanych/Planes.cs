@@ -10,7 +10,7 @@ namespace ProjektBazyDanych
     public class Planes
     {
         [Key]
-        public int ID { get; set; }
+        public string ID { get; set; }
 
         [Required]
         public string producer { get; set; }
@@ -20,5 +20,10 @@ namespace ProjektBazyDanych
 
         [Required]
         public int max_range{ get; set; }
+
+        public override string ToString()
+        {
+            return ID + " " + producer + " " + model;
+        }
     }
 }

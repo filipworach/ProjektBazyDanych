@@ -8,10 +8,11 @@
         Title="adminWindow" Height="450" Width="800">
     <Grid>
         <Button x:Name="deleteFlightButton" Content="Usun lot" HorizontalAlignment="Left" Margin="153,237,0,0" VerticalAlignment="Top" Height="53" Width="117"/>
-        <Button x:Name="addFlightButton" Content="Dodaj Lot" HorizontalAlignment="Left" Margin="153,90,0,0" VerticalAlignment="Top" Height="53" Width="117"/>
-        <Button x:Name="addPilotWindow" Content="Dodaj Pilota" HorizontalAlignment="Left" Margin="536,90,0,0" VerticalAlignment="Top" Height="53" Width="117"/>
+        <Button x:Name="addFlightButton" Content="Dodaj Lot" HorizontalAlignment="Left" Margin="153,90,0,0" VerticalAlignment="Top" Height="53" Width="117" Click="addFlightButton_Click"/>
+        <Button x:Name="addPilotWindow" Content="Dodaj Pilota" HorizontalAlignment="Left" Margin="546,90,0,0" VerticalAlignment="Top" Height="53" Width="117" Click="addPilotWindow_Click"/>
         <Button x:Name="addConnectionWindow" Content="Dodaj Polaczenie" HorizontalAlignment="Center" Margin="0,85,0,0" VerticalAlignment="Top" Height="53" Width="116" Click="addConnectionWindow_Click"/>
         <Button x:Name="addCityWindow" Content="Dodaj Miasto" HorizontalAlignment="Center" Margin="0,232,0,0" VerticalAlignment="Top" Height="53" Width="116" Click="addCityWindow_Click"/>
+        <Button x:Name="addPlaneWindow" Content="Dodaj Samolot" HorizontalAlignment="Left" Margin="546,232,0,0" VerticalAlignment="Top" Height="53" Width="117" Click="addPlaneWindow_Click"/>
 
     </Grid>
 </Window>

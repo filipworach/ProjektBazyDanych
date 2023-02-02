@@ -1,0 +1,20 @@
+﻿<Window x:Class="ProjektBazyDanych.adminWindows.AddPilotWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjektBazyDanych.adminWindows"
+        mc:Ignorable="d"
+        Title="AddPilotWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Margin="134,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="nameTextBox_TextChanged"/>
+        <TextBox x:Name="surNameTextBox" HorizontalAlignment="Center" Margin="0,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="surNameTextBox_TextChanged"/>
+        <DatePicker x:Name="hireDate" HorizontalAlignment="Left" Margin="581,140,0,0" VerticalAlignment="Top"/>
+        <Label Content="Imie
+               " HorizontalAlignment="Left" Margin="134,115,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nazwisko                " HorizontalAlignment="Left" Margin="340,117,0,0" VerticalAlignment="Top"/>
+        <Label Content="Data Zatrudnienia                " HorizontalAlignment="Left" Margin="581,115,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="addPilotButton" Content="Dodaj Pilota" HorizontalAlignment="Left" Margin="340,302,0,0" VerticalAlignment="Top" Click="addPilotButton_Click"/>
+
+    </Grid>
+</Window>

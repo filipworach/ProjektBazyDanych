@@ -176,6 +176,15 @@
     <Compile Include="adminWindows\AddConnectionWindow.xaml.cs">
       <DependentUpon>AddConnectionWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="adminWindows\AddFlightWindow.xaml.cs">
+      <DependentUpon>AddFlightWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="adminWindows\AddPilotWindow.xaml.cs">
+      <DependentUpon>AddPilotWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="adminWindows\AddPlaneWindow.xaml.cs">
+      <DependentUpon>AddPlaneWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Connections.cs" />
     <Compile Include="RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
@@ -205,6 +214,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="adminWindows\AddConnectionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminWindows\AddFlightWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminWindows\AddPilotWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminWindows\AddPlaneWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
